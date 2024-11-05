@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anubhav Infotech</title>
+    <link rel="icon" href="ANUBHAV_INFOTECH-modified.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar" maxwidth="1270">
+            <div class="logo">
+                <img src="ANUBHAV_INFOTECH-modified.png" alt="Anubhav Infotech Logo">
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#homeaboutus">About us</a></li>
+                <li><a href="ourcompanies.html">Our Companies</a></li>
+                <li><a href="partnerships.html">Associate Partnerships</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="DSC.html">DSC</a></li>
+                <li><a href="#">Tools/Utilites</a>
+                    <ul class="submenu">
+                        <li><a href="">Anydesk Download</a></li>
+                        <li><a href="">Team Viewer Download</a></li>
+                        <li><a href="">Java 8 Update 371 32-bit Download</a></li>
+                        <li><a href="">Digital Signature Certificate(DSC) Video Recording link</a></li>
+                    </ul>
+                </li>
+                <li><a href="#foot">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><span class="material-symbols-outlined">
+            expand_less
+        </span></button>
+    <script type="text/javascript">
+        // Get the button:
+        let mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="Anubhavinfotechbanner1.png" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="skoolbag.png" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="SPINE.png" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="SP.png" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="IDSIGN.png" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="MLBD.png" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="kdk2.png" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="HB2.png" style="width:100%">
+        </div>
+        <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+    </div>
+    <br>
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+        <span class="dot" onclick="currentSlide(7)"></span>
+        <span class="dot" onclick="currentSlide(8)"></span>
+    </div>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+        // Auto Slide   if you need auto slide ,remove the commit "//"
+        var slideIndex = 0;
+        showSlides();
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";
+            // setTimeout(showSlides, 2000); // Change image every 2 seconds
+            function manualButtonClicked() {
+                manualBtnClicked = true;
+                showSlides();
+            }
+            if (manualBtnClicked) {
+                setTimeout(function () {
+                    manualBtnClicked = false;
+                }, 8500); // 2000 milliseconds = 2 seconds
+            } else {
+                setTimeout(showSlides, 8500); // 2000 milliseconds = 2 seconds
+            }
+        }
+    </script>
+    <div class="bodycontents" id="homeaboutus">
+        <div class="text">
+            <div class="aboutus">
+                <h1>ABOUT US</h1>
+                <p>
+                    Welcome to Anubhav Infotech!
+                    <br>
+                    <br>
+
+                    At Anubhav Infotech, we take pride in being your trusted associate partners and channel partners for
+                    a wide range of software companies. With our extensive experience and industry expertise, we strive
+                    to provide you with innovative solutions that streamline your business operations and drive your
+                    success.
+                    <br>
+                    <br>
+
+                    Our association with leading software companies specializing in logistics management, HR management,
+                    law books, digital signature certificates, taxation, and accounting software enables us to offer you
+                    a comprehensive suite of solutions tailored to your unique business needs.
+                    <br>
+                    <br>
+
+                    Logistics Management: We understand the challenges of efficient supply chain management and offer
+                    cutting-edge logistics management software that optimizes your operations, enhances visibility, and
+                    ensures timely deliveries. Our solutions empower you to streamline your inventory management, track
+                    shipments, and improve overall operational efficiency.
+                    <br>
+                    <br>
+
+                    HR Management: Human resources are the backbone of any organization, and we recognize the importance
+                    of effective HR management. Our range of HR software solutions enables you to automate various HR
+                    processes, including recruitment, employee onboarding, payroll management, performance evaluation,
+                    and more. Streamline your HR operations, improve employee engagement, and enhance productivity with
+                    our intuitive and user-friendly software.
+                    <br>
+                    <br>
+
+                    Law Books: In the dynamic legal landscape, access to accurate and up-to-date legal information is
+                    crucial. We collaborate with leading law book publishers to provide you with comprehensive legal
+                    research tools and resources. Our software solutions enable you to access an extensive collection of
+                    legal books, case studies, statutes, and commentaries, empowering legal professionals to make
+                    informed decisions and excel in their practice.
+                    <br>
+                    <br>
+
+                    Digital Signature Certificates: In today's digital era, security and authenticity are paramount. Our
+                    digital signature certificate solutions ensure secure and legally binding digital transactions. We
+                    partner with trusted certification authorities to provide you with reliable digital signatures that
+                    comply with industry standards and regulations, ensuring the integrity and authenticity of your
+                    digital documents.
+                    <br>
+                    <br>
+
+                    Taxation and Accounting Software: Managing taxation and accounting processes can be complex and
+                    time-consuming. Our partnership with leading taxation and accounting software providers equips you
+                    with robust solutions that simplify tax compliance, automate accounting tasks, and provide accurate
+                    financial insights. Streamline your financial operations, ensure compliance, and make informed
+                    business decisions with our comprehensive software solutions.
+                    <br>
+                    <br>
+
+                    At Anubhav Infotech, we are committed to delivering exceptional customer service and support. Our
+                    team of experts is dedicated to understanding your unique business requirements, offering
+                    personalized recommendations, and providing ongoing assistance to ensure the seamless implementation
+                    and utilization of our software solutions.
+
+                    Partner with Anubhav Infotech today and experience the power of cutting-edge software solutions
+                    tailored to your specific needs. Let us empower your business and propel you towards growth and
+                    success.
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <footer id="foot" class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <ul class="footerul">
+                        <h4>Company Details</h4>
+                        <p class="footerp"><strong>Anubhav Infotech</strong><br><br>S-8, Smriti Complex, 159 Zone-II
+                            M.P. Nagar,
+                            Bhopal, Madhya Pradesh<br><br>Pin Code: 462011<br><br>Google Maps Location:<br><a
+                                href="https://goo.gl/maps/auvhHvMVXD56FaUY9" target="_blank" class="footerp"
+                                id="geolocation">Anubhav Infotech Bhopal</a>
+                        </p>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul class="footerul">
+                        <li><a>0755 - 4257305</a></li>
+                        <li><a>+91 - 7999330261</a></li>
+                        <li><a>+91 - 9300485206</a></li>
+                        <li><a>anubhavinfotech2012@gmail.com</a></li>
+                        <li><a>anubhavinfotech.com</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/anubhav.intc?mibextid=ZbWKwL" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/anubhavinfotech" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/anubhav.infotech/" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/anubhav-infotech-655147159" target="_blank"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footerbottom">
+                &copy; Anubhav Infotech | All rights reserved | Designed by Anubhav Bhatnagar
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
