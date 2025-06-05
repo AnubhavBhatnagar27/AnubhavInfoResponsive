@@ -1,0 +1,256 @@
+body {
+  background: linear-gradient(135deg, #211C84, #4D55CC, #7A73D1, #B5A8D5);
+  margin: 0;
+  height: 100vh;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+/* Company Logo */
+.logo-img{
+  height: 80px;
+  width: auto;
+  max-width: 100%;
+  
+}
+/* General nav tab styling */
+.nav-link {
+  color: #fff !important;
+  margin: 0 8px;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover Effect on Nav Button */
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.3);
+  /* Gold text on hover */
+}
+
+/* Active tab style */
+.nav-link.active {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #FFF !important;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  background-color: rgba(255, 255, 255, 0.2) !important; /* light translucent background */
+  color: #FFF !important;
+  border-radius: 8px;
+  box-shadow: none;
+  border: none;
+}
+
+/* Submenu styles */
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: rgba(33, 28, 132, 0.95);
+  /* Dark translucent background */
+  padding: 10px;
+  list-style: none;
+  margin-top: 5px;
+  border-radius: 8px;
+  z-index: 1000;
+  min-width: 220px;
+}
+
+.submenu li {
+  margin-bottom: 5px;
+}
+
+.submenu li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+}
+
+.submenu li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Show submenu on hover */
+.nav-item:hover .submenu {
+  display: block;
+}
+
+/* Align submenu below parent */
+.nav-item {
+  position: relative;
+}
+
+/* Custom Hero Section Styling */
+
+.custom-hero {
+  color: #f5f7fa; /* Light text color */
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.custom-hero h1.display-4 {
+  color: #f5f7fa; /* Light text color */
+  font-weight: bold
+  text-body-emphasis;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.custom-hero p.lead {
+  font-size: 1.25rem;
+  color: #cbd5e1;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.custom-hero .btn-primary {
+  background-color: #007bff; /* Bootstrap primary blue or your custom */
+  border-color: #007bff;
+  padding: 0.75rem 1.75rem;
+  font-size: 1.1rem;
+}
+
+.custom-hero .btn-outline-secondary {
+  color: #f5f7fa;
+  border-color: #f5f7fa;
+}
+
+.custom-hero .btn-outline-secondary:hover {
+  background-color: #f5f7fa;
+  color: #1e2a38;
+}
+
+.custom-hero img {
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.25);
+}
+
+/* Featured Products */
+.featured-products {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.25);
+  color: #f5f7fa;
+}
+.featured-products h3 .featured-products-title {
+  color: #f5f7fa;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.icon-link{
+  color: #f5f7fa;
+  text-decoration: underline;
+}
+/* Footer */
+.footer{
+  background-color: rgba(4, 2, 31, 0.212);
+  color: #f5f7fa;
+  padding: 2rem;
+  text-align: center;
+}
+.bi{
+  color: #f5f7fa;
+}
+/* DSC Record Video */
+.recordvideo {
+    background-color: rgba(228, 217, 217, 0.459);
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    margin: 5%;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
+
+.recordvideo a {
+    color: #FFD700;
+    text-decoration: underline;
+    padding: 5px;
+}
+
+/* DSC Navbar Depth */
+.navbar-depth {
+    background-color: rgba(10, 1, 1, 0.425); /* White background with 60% opacity */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* DSC Text */
+.DSC {
+  color: #f5f7fa;
+  text-align: center;
+  font-weight: 300;
+  font-size: larger;
+}
+
+/* #dsc{
+  margin: 10%;
+} */
+main{
+  flex: 1;
+}
+.page-container{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Modal Overlay Styling */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 15, 40, 0.8); /* match your theme */
+  backdrop-filter: blur(4px);
+}
+
+/* Modal Box */
+.modal-box {
+  background: linear-gradient(145deg, #2f2a8a, #484ed0);
+  color: #f5f7fa;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 400px;
+  width: 80%;
+  margin: 10% auto;
+  position: relative;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  animation: fadeInModal 0.3s ease-out;
+}
+.modal-box  a{
+  color: rgb(202 255 1);
+}
+
+/* Close Button */
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Modal fade-in animation */
+@keyframes fadeInModal {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
